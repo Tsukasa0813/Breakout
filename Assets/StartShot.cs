@@ -14,5 +14,9 @@ public class StartShot : MonoBehaviour {
     void Update () {
 
     }
+    public void BallDestroy()
+    {
+	Destroy(this.gameObject);
+     }
 
 }
