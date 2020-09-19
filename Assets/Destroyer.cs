@@ -3,21 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Destroyer : MonoBehaviour {
-
+    public int point;
     public GameObject masterObj;
 
-    // Use this for initialization
-    void Start () {
+    public int initHp;
+    private int currentHp;
+ 
+    public AudioClip hitSE;
+    public AudioClip DestroySE;
 
+    void Start () 
+    {
+	this.currentHp = initHp;
     }
 
-    // Update is called once per frame
-    void Update () {
+    private void OnCollisionEnter(Collision collision)
+   {
+        this.currentHp -= 1;
+    
+    
+    if(this.currentHp <= 0)
+    {
+        AudioSource.PlayClipAtPoint(DestroySE,transform.position);
+        
+        masterObj.GetComponent<GameMaster>().boxNum--;
 
+        FindObjectOfType<Score>().AddPoint(point);
+        
+        Destroy(this.gameObject);
     }
-
-    private void OnCollisionEnter(Collision collision) {
-    masterObj.GetComponent<GameMaster>().boxNum--;  
-    Destroy(gameObject);
+    else
+    {
+        AudioSource.PlayClipAtPoint(hitSE,transform.position);
     }
+  }
 }

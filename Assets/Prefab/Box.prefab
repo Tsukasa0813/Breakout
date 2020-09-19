@@ -107,7 +107,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c19b3b5b33b5a493b807b6f238b12d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  point: 200
   masterObj: {fileID: 0}
+  initHp: 3
+  hitSE: {fileID: 8300000, guid: f73d7ffe2a9c242ada26ebac776d602c, type: 3}
+  DestroySE: {fileID: 8300000, guid: d6ce430be01f145998abc15832fa6b52, type: 3}
 --- !u!114 &5367733500805366418
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -705,8 +705,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d492987e39bf54807b5c882398f968b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxObjPrefab: {fileID: 5807430260665336090, guid: 05a93b1b20a7d47db9982ee9d2750839,
-    type: 3}
+  boxObjPrefabs:
+  - {fileID: 5807430260665336090, guid: 05a93b1b20a7d47db9982ee9d2750839, type: 3}
+  - {fileID: 6021627982649678370, guid: 5716a649a192f4e349c173734599fb86, type: 3}
   boxesObj: {fileID: 454425177}
 --- !u!1001 &493434108
 PrefabInstance:
@@ -1665,6 +1666,7 @@ GameObject:
   - component: {fileID: 1884719292}
   - component: {fileID: 1884719291}
   - component: {fileID: 1884719290}
+  - component: {fileID: 1884719294}
   m_Layer: 5
   m_Name: ScoreCanvas
   m_TagString: Untagged
@@ -1757,6 +1759,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1884719294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884719289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e582f7bd59d94cd6907a69311a71803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 574425990}
+  highScoreText: {fileID: 1211602084}
 --- !u!1 &1924653240
 GameObject:
   m_ObjectHideFlags: 0
